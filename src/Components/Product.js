@@ -35,7 +35,7 @@ function Product() {
                             <Link to={`/product/${product}`}>
                                 <Paper elevation={4} className={classes.paper}>
                                     <h2>{Shoes[product].name}</h2>
-                                    <img src={Shoes[product].img} className={classes.productImage} />
+                                    <img alt="product image" src={Shoes[product].img} className={classes.productImage} />
                                 </Paper>
                             </Link>
                         </Grid>
