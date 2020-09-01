@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import indoor from './indoor.png'
+import BgVideo from './Shoes.mp4';
 
 const useStyles = makeStyles((theme) => ({
     firstDiv: {
@@ -17,34 +17,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "50px",
         margin: 0
     },
-    mybutton: {
-        color: "white",
-        backgroundColor: "transparent",
-        backgroundImage: "none",
-        borderColor: "white",
-
-        display: "inline-block",
-        fontWeight: "400",
-        textAlign: "center",
-        whiteSpace: "nowrap",
-        verticalAlign: "middle",
-        userSelect: "none",
-        border: "1px solid transparent",
-        padding: "0.7rem 1rem",
-        fontSize: "1rem",
-        lineHeight: 1.5,
-        borderRadius: ".25rem",
-        transition: "color .15s ease-in-out",
-        "&:hover":{
-            transform: "Scale(1.2)",
-        }
-    },
-    particlesJs: {
-        backgroundImage: `url(${indoor})`,
-        color: "rgba(0,0,0, 0.6)",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        height: "92vh"
+    bgvideo: {
+        width: '100%',
     }
 }
 ));
@@ -58,10 +32,15 @@ function Home() {
                     <h1 className={classes.firstH1}>Smart Shopping</h1>
                     <p >With Smart Retail’s System, you can seamlessly update all your Offers with new content, videos, images and text.
                     Regardless of whether you have one Store or one thousand, you can manage them all from one computer.
-            </p><button className={classes.mybutton} type="button">Learn More</button></div>
+            </p></div>
             </div>
             <div className={classes.particlesJs}></div>
+            <video className={classes.bgvideo} loop autoPlay>
+                <source src={BgVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         </div>
+
     )
 }
 
